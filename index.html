@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main class="main">
+    <img src="images/logo.svg" alt="" class="logo">
+    <div class="main__dataContainer">
+
+      <div class="main__dataContainer-bill">
+        <div class="textBox"><!-- added in a second moment, no BEM updated -->
+          <p>Bill</p>
+          <p class="errorText hidden" id="billError">Can't be zero</p>
+        </div>
+        <input type="text" placeholder="0" id="#inputBill">
+        <img src="images/icon-dollar.svg" alt="dollar-icon">
+      </div>
+
+      <div class="main__dataContainer-tip">
+        <p>Select Tip %</p>
+        <div class="dataContainer__tip-grid">
+          <button class="tipButton" id="#tipButton5">5%</button>
+          <button class="tipButton" id="#tipButton10">10%</button>
+          <button class="tipButton" id="#tipButton15">15%</button>
+          <button class="tipButton" id="#tipButton25">25%</button>
+          <button class="tipButton" id="#tipButton50">50%</button>
+          <button class="customButton">custom</button>
+          <input type="text" id="#customTip" class="customTipInput hidden">
+        </div>
+      </div>
+
+      <div class="main__dataContainer-people">
+        <div class="textBox"><!-- added in a second moment, no BEM updated -->
+          <p>Number of People</p>
+          <p class="errorText hidden" id="peopleError">Can't be zero</p>
+        </div>
+          <input type="text" placeholder="0" id="inputPeople">
+          <img src="images/icon-person.svg" alt="person-icon">
+      </div>
+
+    </div>
+
+    <div class="main__resultContainer">
+      <div class="box"> <!-- added in a second moment, no BEM updated -->
+        <div class="main__resultContainer-result">
+          <div class="resultContainer__result-text">
+            <h3>Tip Amount</h3>
+            <p>/ person</p>
+          </div>
+          <label for="tipOutput">$<span id="#displayTip">0.00</span></label>
+        </div>
+        <div class="main__resultContainer-result">
+            <div class="resultContainer__result-text">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <label for="totalOutput">$<span id="#displayTotal">0.00</span></label>  
+        </div>
+      </div>
+      <button id="#reset" class="resetButton">reset</button>
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

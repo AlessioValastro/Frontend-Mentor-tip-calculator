@@ -1,0 +1,223 @@
+/* ! Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0px solid grey;
+}
+
+:root {
+  --strongCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+
+  --font-family: "Space Mono", monospace;
+}
+
+body {
+  background: var(--lightGrayishCyan);
+  font-family: var(--font-family);
+  font-size: 24px;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.main__dataContainer-bill {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.main__dataContainer-tip {
+  margin-bottom: 2rem;
+}
+.main__dataContainer-people {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.main {
+  background: #fff;
+  padding: 2rem;
+  width: 95%;
+  
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.logo{
+  display: none;
+}
+p {
+  color: var(--grayishCyan);
+  font-size: 0.8rem;
+
+  margin-bottom: 0.7rem;
+}
+
+.main__dataContainer-bill input {
+  background: var(--veryLightGrayishCyan);
+  color: var(--strongCyan);
+
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.3rem;
+
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  text-align: right;
+}
+.main__dataContainer-bill input:focus {
+  outline: 2px solid var(--grayishCyan);
+}
+.main img {
+  position: absolute;
+  left: 15px;
+  top: 45px;
+}
+
+.main__dataContainer-people input {
+  background: var(--veryLightGrayishCyan);
+  color: var(--strongCyan);
+
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.3rem;
+
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  text-align: right;
+}
+.main__dataContainer-people input:focus {
+  outline: 2px solid var(--grayishCyan);
+}
+
+.dataContainer__tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.tipButton {
+  background: var(--strongCyan);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.customButton {
+  background: var(--veryLightGrayishCyan);
+  color: var(--grayishCyan);
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.customTipInput {
+  background: var(--veryLightGrayishCyan);
+  color: var(--strongCyan);
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  outline: 2px solid var(--grayishCyan);
+  width: 100%;
+}
+.main__resultContainer {
+  background: var(--strongCyan);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.main__resultContainer-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resultContainer__result-text h3 {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.resetButton {
+  background: hsl(183, 78%, 37%);
+  color: var(--strongCyan);
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem;
+  border-radius: 0.4rem;
+
+  text-transform: uppercase;
+}
+label {
+  color: hsl(183, 78%, 37%);
+}
+.textBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.errorText {
+  color: rgba(255, 0, 0, 0.469);
+}
+
+@media (min-width: 480px) {
+  button {
+    cursor: pointer;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    max-width: 1000px;
+  }
+  input {
+    cursor: pointer;
+  }
+  .dataContainer__tip-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main__resultContainer {
+    padding: 2.5rem;
+    gap: 0;
+    justify-content: space-between;
+  }
+  label {
+    font-size: 3rem;
+  }
+
+  .tipButton:hover {
+    color: var(--strongCyan);
+    background: var(--lightGrayishCyan);
+  }
+  .resetButton:hover {
+    background: var(--lightGrayishCyan);
+  }
+}
+
+.selected {
+  color: var(--strongCyan);
+  background: var(--lightGrayishCyan);
+}
+.hidden {
+  display: none;
+}
+.error {
+  border: 2px solid rgba(255, 0, 0, 0.469);
+}
